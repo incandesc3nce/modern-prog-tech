@@ -16,7 +16,7 @@ class Circle {
 
     double distance();
 
-    Circle add(Circle c);
+    Circle add(Circle c1, Circle c2);
 
 };
 
@@ -45,8 +45,8 @@ class Circle {
     return sqrt(x * x + y * y);
   }
 
-  Circle Circle::add(Circle c) {
+  Circle Circle::add(Circle c1, Circle c2) {
     Circle result;
-    result.Init(radius + c.radius, x + c.x, y + c.y);
+    result.Init(c1.radius + c2.radius, c1.x + c2.x, c1.y + c2.y);
     return result;
   }

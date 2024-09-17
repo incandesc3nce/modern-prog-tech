@@ -40,10 +40,10 @@ public class Circle
         return Math.Sqrt(x * x + y * y);
     }
 
-    public Circle Add(Circle c)
+    public Circle Add(Circle c1, Circle c2)
     {
         Circle result = new Circle();
-        result.Init(radius + c.radius, x + c.x, y + c.y);
+        result.Init(c1.radius + c2.radius, c1.x + c2.x, c1.y + c2.y);
         return result;
     }
 }
