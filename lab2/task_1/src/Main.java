@@ -1,28 +1,26 @@
 public class Main {
     public static void main(String[] args) {
+        Circle[] circles = new Circle[3];
+
         Circle c1 = new Circle();
-        Circle[] circleArray = new Circle[3];
-
-        for (int i = 0; i < circleArray.length; i++) {
-            circleArray[i] = new Circle();
-        }
-
-        c1.init(5, 1, 2);
-        c1.display();
-        System.out.println(c1.distance());
-
-        for (Circle circle : circleArray) {
-            circle.read();
-            circle.display();
-        }
-
         Circle c2 = new Circle();
-        c2.init(0, 0, 0);
+        Circle c3 = new Circle();
 
-        for (Circle circle : circleArray) {
-            c2 = c2.add(c2, circle);
+        c1.init(4, 2, 1);
+        c2.init(3, -1, -2);
+        c3.init(5, 3, 4);
+
+        circles[0] = c1;
+        circles[1] = c2;
+        circles[2] = c3;
+
+        Circle totalCircle = new Circle();
+        totalCircle.init(0, 0, 0);
+
+        for (Circle circle : circles) {
+            totalCircle = totalCircle.add(totalCircle, circle);
         }
 
-        c2.display();
+        totalCircle.display();
     }
 }

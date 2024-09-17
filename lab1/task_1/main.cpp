@@ -4,30 +4,43 @@
 using namespace std;
 
 int main() {
-    Circle* c1 = new Circle();
-    Circle* circleArray = new Circle[3];
+    int staticSize = 3;
+    Circle circles_static[staticSize];
+    int dynamicSize = 3;
+    Circle *circles_dynamic = new Circle[dynamicSize];
 
-    c1->Init(5, 1, 2);
-    c1->Display();
-    cout << (*c1).distance() << endl;
+    Circle c1, c2, c3;
+    c1.Init(4, 2, -1);
+    c2.Init(6, -5, 2);
+    c3.Init(2, 1, 1);
 
-    delete c1;
+    circles_static[0] = c1;
+    circles_static[1] = c2;
+    circles_static[2] = c3;
 
-    for (int i = 0; i < 3; i++) {
-        circleArray[i].Read();
-        circleArray[i].Display();
+    Circle c4, c5, c6;
+    c4.Init(3, -1, 1);
+    c5.Init(2, 2, -2);
+    c6.Init(1, 3, 3);
+
+    circles_dynamic[0] = c4;
+    circles_dynamic[1] = c5;
+    circles_dynamic[2] = c6;
+
+    Circle totalCircle;
+    totalCircle.Init(0, 0, 0);
+    
+    for (int i = 0; i < staticSize; i++) {
+        totalCircle = totalCircle.add(totalCircle, circles_static[i]);
     }
 
-    Circle c2 = Circle();
-    c2.Init(0, 0, 0);
-    
-    for (int i = 0; i < 3; i++) {
-        c2 = c2.add(circleArray[i]);
+    for (int i = 0; i < dynamicSize; i++) {
+        totalCircle = totalCircle.add(totalCircle, circles_dynamic[i]);
     }
 
-    c2.Display();
-    
-    delete[] circleArray;
+    totalCircle.Display();
+
+    delete[] circles_dynamic;
 
     return 0;
 }

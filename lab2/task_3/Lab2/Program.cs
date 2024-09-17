@@ -4,27 +4,27 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        Circle[] circles = new Circle[3];
+
         Circle c1 = new Circle();
-        c1.Init(5, 1, 2);
-        c1.Display();
-        Console.WriteLine("Distance: " + c1.Distance());
-
-        Circle[] circleArray = new Circle[3];
-        for (int i = 0; i < circleArray.Length; i++)
-        {
-            circleArray[i] = new Circle();
-            circleArray[i].Read();
-            circleArray[i].Display();
-        }
-
         Circle c2 = new Circle();
-        c2.Init(0, 0, 0);
+        Circle c3 = new Circle();
 
-        for (int i = 0; i < circleArray.Length; i++)
-        {
-            c2 = c2.Add(circleArray[i]);
+        c1.Init(4, 2, 1);
+        c2.Init(3, -1, -2);
+        c3.Init(5, 3, 4);
+
+        circles[0] = c1;
+        circles[1] = c2;
+        circles[2] = c3;
+
+        Circle totalCircle = new Circle();
+        totalCircle.Init(0, 0, 0);
+
+        for (int i = 0; i < circles.Length; i++) {
+            totalCircle = totalCircle.Add(totalCircle, circles[i]);
         }
 
-        c2.Display();
+        totalCircle.Display();
     }
 }
