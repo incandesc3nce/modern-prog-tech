@@ -5,8 +5,8 @@ using namespace std;
 
 class Jewelry {
   private: 
-    double weight;
-    double pricePerGramm;
+    double weight =1;
+    double pricePerGramm =1;
 
   public:
     void init(double arg_weight, double arg_pricePerGramm);
