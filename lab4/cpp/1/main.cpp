@@ -20,6 +20,10 @@ int main() {
     cout << "Сложение объекта и числа:" << endl;
     c4.Display();
 
+    c4 = 6 + c3;
+    cout << "Сложение числа и объекта:" << endl;
+    c4.Display();
+
     c1.Init(5, 8, 3);
 
     Circle c5 = ++c1;

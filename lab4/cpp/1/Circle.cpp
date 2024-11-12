@@ -28,6 +28,7 @@ class Circle {
 
     Circle operator+(Circle c);
     Circle operator+(double val);
+    friend Circle operator+(double val, Circle c);
 
     Circle& operator++();
     Circle operator++(int unused);
@@ -130,6 +131,15 @@ class Circle {
     result.radius = this->radius + val;
     result.x = this->x;
     result.y = this->y;
+
+    return result;
+  }
+
+  Circle operator+(double val, Circle c) {
+    Circle result;
+    result.radius = c.radius + val;
+    result.x = c.x;
+    result.y = c.y;
 
     return result;
   }
