@@ -37,6 +37,7 @@ class Circle {
     friend Circle operator >> (istream& is, Circle& c);
 
     static void arr(double* a, int n, double *b, int m);
+    static void arr2(double** a, int n, int m);
 };
 
   Circle::Circle() {
@@ -187,5 +188,20 @@ class Circle {
 
     for (int i = 0; i < m; ++i) {
       b[i] = sin(a[i]) + i * i;
+    }
+  }
+
+  void Circle::arr2(double** a, int n, int m) {
+    int val = 1;
+    for (int i = 0; i < n; ++i) {
+      if (i % 2 == 0) {
+        for (int j = 0; j < m; ++j) {
+          a[i][j] = val++;
+        }
+      } else {
+        for (int j = m - 1; j >= 0; --j) {
+          a[i][j] = val++;
+        }
+      }
     }
   }

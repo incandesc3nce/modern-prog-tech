@@ -5,20 +5,22 @@ using namespace std;
 
 int main() {
     const int N = 5;
-    const int M = 3;
-    double a[N], b[M];
+    const int M = 6;
 
-    Circle::arr(a, N, b, M);
+    double a[N][M];
+    double* b[N];
+    for (int i = 0; i < M; i++) {
+        b[i] = a[i];
+    }
+
+    Circle::arr2(b, N, M);
 
     for (int i = 0; i < N; i++) {
-        cout << a[i] << " ";
+        for (int j = 0; j < M; j++) {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
-
-    for (int i = 0; i < M; i++) {
-        cout << b[i] << " ";
-    }
-    cout << endl;
 
     return 0;
 }

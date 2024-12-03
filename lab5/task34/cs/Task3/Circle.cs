@@ -67,5 +67,22 @@ public class Circle
             b[i] = Math.Sin(a[i]) + i * i;
         }
     }
+
+    static public void Arr2(double[,] a, int n, int m) {
+        int val = 1;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                for (int j = 0; j < m; j++) {
+                    a[i, j] = val;
+                    val++;
+                }
+            } else {
+                for (int j = m - 1; j >= 0; j--) {
+                    a[i, j] = val;
+                    val++;
+                }
+            }
+        }
+    }
 }
 }
