@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JewelryShop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <jewelry1>
+    <weight>5</weight>
+    <pricePerGramm>1</pricePerGramm>
+  </jewelry1>
+  <jewelry2>
+    <weight>6</weight>
+    <pricePerGramm>2</pricePerGramm>
+  </jewelry2>
+  <jewelry3>
+    <weight>7</weight>
+    <pricePerGramm>3</pricePerGramm>
+  </jewelry3>
+  <count1>1</count1>
+  <count2>2</count2>
+  <count3>3</count3>
+  <ExtraPrice>100</ExtraPrice>
+</JewelryShop>
