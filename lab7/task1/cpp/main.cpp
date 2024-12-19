@@ -17,7 +17,14 @@ int main() {
     Cylinder* b = new Cylinder(3, 4, 5, 3);
     a = b;
     cout << endl << "Метод distance виртуальный, значит берется из Cylinder" << endl;
-    cout << "Расстояние до начала координат: " << a->distance() << endl;
+    a->shiftCenter();
+    cout << "После смещения центра по оси OX: " << endl;
+    cout << "Circle:" << endl;
+    a->Display();
+    cout << "Cylinder:" << endl;
+    b->Display();
+    cout << "Расстояние до начала координат (Circle): " << a->distance() << endl;
+    cout << "Расстояние до начала координат (Cylinder): " << b->distance() << endl;
 
     return 0;
 }

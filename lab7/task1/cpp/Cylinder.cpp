@@ -23,9 +23,6 @@ class Cylinder: public Circle {
 
   // присваивание
     void operator=(Circle c);
-
-  // метод, с использованием виртуального метода
-    void shiftCenter();
 };
 
 double Cylinder::Get() {
@@ -67,9 +64,4 @@ void Cylinder::operator=(Circle c) {
   x = c.getX();
   y = c.getY();
   z = radius / 2;
-}
-
-void Cylinder::shiftCenter() {
-  double Z = distance();
-  x += 5 * Z;
 }
