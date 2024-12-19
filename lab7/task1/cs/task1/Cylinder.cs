@@ -10,7 +10,7 @@ public class Cylinder: Circle {
     z = arg_z;
   }
 
-  public double Distance() {
+  public override double Distance() {
     return x + y + (z / 2);
   }
 

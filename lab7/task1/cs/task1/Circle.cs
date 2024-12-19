@@ -37,7 +37,7 @@ public class Circle
         Console.WriteLine($"Координата y: {y}");
     }
 
-    public double Distance()
+    virtual public double Distance()
     {
         return Math.Sqrt(x * x + y * y);
     }
