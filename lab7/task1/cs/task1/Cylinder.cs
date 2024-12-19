@@ -10,7 +10,7 @@ public class Cylinder: Circle {
     z = arg_z;
   }
 
-  public override double Distance() {
+  public double Distance() {
     return x + y + (z / 2);
   }
 
@@ -34,12 +34,6 @@ public class Cylinder: Circle {
 
   public Cylinder(double r, double arg_x, double arg_y, double arg_z): base(r, arg_x, arg_y) {
     z = arg_z;
-  }
-
-  public void ShiftCenter()
-  {
-    double Z = Distance();
-    x += 5 * Z;
   }
 
 }

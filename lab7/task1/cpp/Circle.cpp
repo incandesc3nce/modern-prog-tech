@@ -24,6 +24,9 @@ class Circle {
     double getRadius();
     double getX();
     double getY();
+
+    // метод, с использованием виртуального метода
+    void shiftCenter();
 };
 
   void Circle::Init(double r, double arg_x, double arg_y) {
@@ -85,4 +88,9 @@ class Circle {
 
   double Circle::getY() {
     return y;
+  }
+
+  void Circle::shiftCenter() {
+    double Z = distance();
+    x += 5 * Z;
   }
