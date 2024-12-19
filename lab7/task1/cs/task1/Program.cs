@@ -19,7 +19,7 @@ public class Program
         Cylinder b = new Cylinder(3, 4, 5, 3);
         a = b;
         double dist = a.Distance();
-        Console.WriteLine("Метод Distance() не виртуальный.\n");
+        Console.WriteLine("Метод Distance() виртуальный.\n");
         Console.WriteLine($"Расстояние от начала координат до центра: {dist}");
     }
 }
