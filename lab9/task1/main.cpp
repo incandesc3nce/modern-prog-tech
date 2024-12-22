@@ -28,16 +28,18 @@ int main() {
   while (in >> number) {
     v.push_back(number);
   }
+
+  vector<int>::iterator ir;
   cout << "Изначальный контейнер: " << endl;
-  for (int i = 0; i < v.size(); i++) {
-    cout << v[i] << " ";
+  for (ir = v.begin(); ir != v.end(); ++ir) {
+    cout << *ir << " ";
   }
 
   sort(v.begin(), v.end(), compare);
 
   cout << endl << "Отсортированный контейнер: " << endl;
-  for (int i = 0; i < v.size(); i++) {
-    cout << v[i] << " ";
+  for (ir = v.begin(); ir != v.end(); ++ir) {
+    cout << *ir << " ";
   }
   cout << endl;
   return 0;
