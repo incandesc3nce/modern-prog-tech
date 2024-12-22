@@ -20,12 +20,16 @@ int main() {
     }
 
     vector<Circle*>::iterator ir;
+    double cylinderDistances = 0;
+    double circleDistances = 0;
 
     for (ir = v.begin(); ir != v.end(); ++ir) {
         if (dynamic_cast<Cylinder*>(*ir)) {
             cylinderCount++;
+            cylinderDistances += (*ir)->distance();
         } else {
             circleCount++;
+            circleDistances += (*ir)->distance();
         }
     }
 
@@ -37,13 +41,8 @@ int main() {
         cout << endl;
     }
 
-    double distanceSum = 0;
-    
-    for (ir = v.begin(); ir != v.end(); ++ir) {
-        distanceSum += (*ir)->distance();
-    }
-
-    cout << "Сумма расстояний до начала координат: " << distanceSum << endl;
+    cout << "Суммы расстояний до центра окружности цилиндров: " << cylinderDistances << endl;
+    cout << "Суммы расстояний до центра окружности окружностей: " << circleDistances << endl;
 
     return 0;
 }
