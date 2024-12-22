@@ -12,5 +12,5 @@
 - [Лабораторная работа 6](https://github.com/incandesc3nce/modern-prog-tech/tree/main/lab6)
 - [Лабораторная работа 7](https://github.com/incandesc3nce/modern-prog-tech/tree/main/lab7)
 - Лабораторная работа 8
-- Лабораторная работа 9
+- [Лабораторная работа 9](https://github.com/incandesc3nce/modern-prog-tech/tree/main/lab9)
 - Лабораторная работа 10
