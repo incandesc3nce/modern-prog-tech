@@ -1,0 +1,20 @@
+﻿<Window x:Class="lab4_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="lab4_3" Height="300" Width="400">
+    <Grid>
+        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Width="100" />
+        <Label x:Name="ResultLabel" Content="Результат:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,60,0,0" Width="200" />
+        <Label x:Name="ValueLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,60,0,0" />
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,20,0,0">
+            <RadioButton x:Name="Formula1RadioButton" Content="y=[sin(x)]^2, x&lt;=2" Checked="RadioButton1_Checked" />
+            <RadioButton x:Name="Formula2RadioButton" Content="y=2x^3 - 2,  2&lt;x&lt;3" Checked="RadioButton2_Checked" />
+            <RadioButton x:Name="Formula3RadioButton" Content="y=(2x+4)*x, x>=3" Checked="RadioButton3_Checked" />
+        </StackPanel>
+
+        <Button x:Name="CalculateButton" Content="Вычислить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,120,0,0" Width="100" Click="CalculateButton_Click" />
+
+        <CheckBox x:Name="DoubleResultCheckBox" Content="Удвоить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,160,0,0" Checked="DoubleResultCheckBox_Checked" Unchecked="DoubleResultCheckBox_Unchecked"/>
+    </Grid>
+</Window>
