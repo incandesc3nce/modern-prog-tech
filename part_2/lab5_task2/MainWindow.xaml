@@ -1,0 +1,55 @@
+﻿<Window x:Class="lab5_task2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5_task2"
+        mc:Ignorable="d"
+        Title="lab 5.2" Height="750" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Исходный текст" Grid.Row="0">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,5,0,0">
+                    <Button x:Name="btnAnalyze" Content="Преобразовать" Width="120" Margin="0,0,10,0" Click="btnAnalyze_Click"/>
+                    <Button x:Name="btnClear" Content="Очистить" Width="80" Click="btnClear_Click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="15,0,0,0">
+                        <Run Text="Количество слов: "/>
+                        <Run x:Name="txtWordCount" FontWeight="Bold" Text="0"/>
+                        <Run Text=" (после фильтрации: "/>
+                        <Run x:Name="txtFilteredWordCount" FontWeight="Bold" Text="0"/>
+                        <Run Text=")"/>
+                    </TextBlock>
+                </StackPanel>
+                <TextBox x:Name="txtInput" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="0,5,0,5"/>
+            </DockPanel>
+        </GroupBox>
+        
+        <GroupBox Header="Преобразованный текст" Grid.Row="1" Margin="0,10,0,0">
+            <TextBox x:Name="txtTransformed" IsReadOnly="True" TextWrapping="Wrap" 
+                     VerticalScrollBarVisibility="Auto" Height="100" 
+                     Background="#F5F5F5" Margin="0,5,0,0"/>
+        </GroupBox>
+
+        <GroupBox Header="Пары слов" Grid.Row="2" Margin="0,10,0,0">
+            <ListBox x:Name="lstSimilarPairs" Margin="0,5,0,0"/>
+        </GroupBox>
+
+        <TextBlock Grid.Row="3" Margin="0,10,0,5" Text="Таблица" FontWeight="Bold"/>
+
+        <Grid Grid.Row="4">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="gridDistances" AutoGenerateColumns="True" IsReadOnly="True"
+                          HeadersVisibility="All" AlternatingRowBackground="AliceBlue"
+                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False"/>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

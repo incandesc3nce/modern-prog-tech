@@ -23,3 +23,4 @@
 - [Лабораторная работа 2](https://github.com/incandesc3nce/modern-prog-tech/tree/main/part_2/lab2)
 - [Лабораторная работа 3](https://github.com/incandesc3nce/modern-prog-tech/tree/main/part_2/lab3)
 - [Лабораторная работа 4](https://github.com/incandesc3nce/modern-prog-tech/tree/main/part_2/lab4)
+- [Лабораторная работа 5](https://github.com/incandesc3nce/modern-prog-tech/tree/main/part_2/lab5)

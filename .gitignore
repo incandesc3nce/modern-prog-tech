@@ -5,3 +5,4 @@ obj
 out
 main
 .vs
+*.csproj.user
